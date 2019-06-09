@@ -1,0 +1,214 @@
+<!--Statistics cards Starts-->
+<div class="row">
+
+	<div class="col-xl-4 col-lg-6 col-md-6 col-12">
+		<div class="card gradient-ibiza-sunset">
+			<div class="card-content">
+				<div class="card-body pt-2 pb-0">
+					<div class="media">
+						<div class="media-body white text-left">
+							<h3 class="font-large-1 mb-0">342</h3>
+							<span>Total de sonhos realizados</span>
+						</div>
+						<div class="media-right white text-right">
+							<i class="icon-bulb font-large-1"></i>
+						</div>
+					</div>
+				</div>
+				<div id="Widget-line-chart" class="height-75 WidgetlineChart WidgetlineChartshadow mb-2">
+					<x-chartist class="" [data]="WidgetlineChart.data" [type]="WidgetlineChart.type"
+						[options]="WidgetlineChart.options" [responsiveOptions]="WidgetlineChart.responsiveOptions"
+						[events]="WidgetlineChart.events">
+					</x-chartist>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-4 col-lg-6 col-md-6 col-12">
+		<div class="card gradient-blackberry">
+			<div class="card-content">
+				<div class="card-body pt-2 pb-0">
+					<div class="media">
+						<div class="media-body white text-left">
+							<h3 class="font-large-1 mb-0">R$6402</h3>
+							<span>Total financiado</span>
+						</div>
+						<div class="media-right white text-right">
+							<i class="icon-pie-chart font-large-1"></i>
+						</div>
+					</div>
+				</div>
+				<div id="Widget-line-chart" class="height-75 WidgetlineChart WidgetlineChartshadow mb-2">
+					<x-chartist class="" [data]="WidgetlineChart.data" [type]="WidgetlineChart.type"
+						[options]="WidgetlineChart.options" [responsiveOptions]="WidgetlineChart.responsiveOptions"
+						[events]="WidgetlineChart.events">
+					</x-chartist>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-4 col-lg-6 col-md-6 col-12">
+		<div class="card gradient-green-tea">
+			<div class="card-content">
+				<div class="card-body pt-2 pb-0">
+					<div class="media">
+						<div class="media-body white text-left">
+							<h3 class="font-large-1 mb-0">R$3402</h3>
+							<span>Total rentabilizado</span>
+						</div>
+						<div class="media-right white text-right">
+							<i class="icon-graph font-large-1"></i>
+						</div>
+					</div>
+				</div>
+				<div id="Widget-line-chart" class="height-75 WidgetlineChart WidgetlineChartshadow mb-2">
+					<x-chartist class="" [data]="WidgetlineChart.data" [type]="WidgetlineChart.type"
+						[options]="WidgetlineChart.options" [responsiveOptions]="WidgetlineChart.responsiveOptions"
+						[events]="WidgetlineChart.events">
+					</x-chartist>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Statistics cards Ends-->
+
+<div class="row" matchHeight="card">
+	<div class="col-xl-4 col-lg-12">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title">Relatório de propostas</h4>
+			</div>
+			<div class="card-content">
+
+				<p class="font-medium-2 text-muted text-center">Propostas</p>
+				<div id="donut-dashboard-chart" class="height-250 donut">
+					<x-chartist class="" [data]="DonutChart.data" [type]="DonutChart.type"
+						[options]="DonutChart.options" [responsiveOptions]="DonutChart.responsiveOptions"
+						[events]="DonutChart.events">
+					</x-chartist>
+				</div>
+
+				<div class="card-body">
+					<div class="row mb-3">
+						<div class="col">
+							<span class="mb-1 text-muted d-block">23% - Iniciadas</span>
+							<div class="progress" style="height: 5px;">
+								<div class="progress-bar bg-success" role="progressbar" style="width: 23%;"
+									aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+						<div class="col">
+							<span class="mb-1 text-muted d-block">14% - Em aprovação</span>
+							<div class="progress" style="height: 5px;">
+								<div class="progress-bar bg-amber" role="progressbar" style="width: 14%;"
+									aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-2">
+						<div class="col">
+							<span class="mb-1 text-muted d-block">5% - Recusadas</span>
+							<div class="progress" style="height: 5px;">
+								<div class="progress-bar bg-deep-purple bg-lighten-1" role="progressbar"
+									style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+						<div class="col">
+							<span class="mb-1 text-muted d-block">58% - Aprovadas</span>
+							<div class="progress" style="height: 5px;">
+								<div class="progress-bar bg-blue" role="progressbar" style="width: 58%;"
+									aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xl-4 col-lg-12">
+		<div class="card">
+			<div class="card-header">
+				<h4 class="card-title mb-0">Clientes recentes</h4>
+			</div>
+			<div class="card-content">
+				<div class="card-body">
+					<div class="media mb-1">
+						<a>
+							<img alt="96x96" class="media-object d-flex mr-3 bg-primary height-50 rounded-circle"
+								src="assets/img/portrait/small/avatar-s-12.png">
+						</a>
+						<div class="media-body">
+							<h4 class="font-medium-1 mt-1 mb-0">Jéssica Martins</h4>
+							<p class="text-muted font-small-3">Objetivo: Obter uma CNH</p>
+						</div>
+					</div>
+					<div class="media mb-1">
+						<a>
+							<img alt="96x96" class="media-object d-flex mr-3 bg-danger height-50 rounded-circle"
+								src="assets/img/portrait/small/avatar-s-11.png">
+						</a>
+						<div class="media-body">
+							<h4 class="font-medium-1 mt-1 mb-0">Ricardo Teixeira</h4>
+							<p class="text-muted font-small-3">Objetivo: Compra de uma bicicleta</p>
+						</div>
+					</div>
+					<div class="media mb-1">
+						<a>
+							<img alt="96x96" class="media-object d-flex mr-3 bg-success height-50 rounded-circle"
+								src="assets/img/portrait/small/avatar-s-3.png">
+						</a>
+						<div class="media-body">
+							<h4 class="font-medium-1 mt-1 mb-0">Marcos Silva</h4>
+							<p class="text-muted font-small-3">Objetivo: Compra de medicamentos</p>
+						</div>
+					</div>
+					<div class="media mb-1">
+						<a>
+							<img alt="96x96" class="media-object d-flex mr-3 bg-warning height-50 rounded-circle"
+								src="assets/img/portrait/small/avatar-s-6.png">
+						</a>
+						<div class="media-body">
+							<h4 class="font-medium-1 mt-1 mb-0">Amanda Castro</h4>
+							<p class="text-muted font-small-3">Objetivo: Compra de uma moto</p>
+						</div>
+					</div>
+					<div class="media mb-1">
+						<a>
+							<img alt="96x96" class="media-object d-flex mr-3 bg-info height-50 rounded-circle"
+								src="assets/img/portrait/small/avatar-s-18.png">
+						</a>
+						<div class="media-body">
+							<h4 class="font-medium-1 mt-1 mb-0">Janete Alencar</h4>
+							<p class="text-muted font-small-3">Objetivo: Curso profissionalizante</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xl-4 col-lg-12 col-12">
+		<div class="card gradient-blackberry">
+			<div class="card-content">
+				<div class="card-body">
+					<h4 class="card-title white">Estatísticas</h4>
+					<div class="p-2 text-center">
+						<a class="white font-medium-1">Mês</a>
+						<a class="btn btn-raised btn-round bg-white mx-3 px-3">Semana</a>
+						<a class="white font-medium-1">Dia</a>
+					</div>
+					<div class="my-3 text-center white">
+						<a class="font-large-2 d-block mb-1">R$ 1420.89 <span class="ft-arrow-up font-large-2"></span></a>
+					</div>
+				</div>
+				<div id="lineChart" class="height-250 lineChart lineChartShadow">
+					<x-chartist class="" [data]="lineChart.data" [type]="lineChart.type" [options]="lineChart.options"
+						[responsiveOptions]="lineChart.responsiveOptions" [events]="lineChart.events">
+					</x-chartist>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

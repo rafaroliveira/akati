@@ -1,0 +1,120 @@
+<!-- Basic form layout section start -->
+<section id="basic-form-layouts">
+  <div class="row text-left">
+    <div class="col-sm-12">
+      <div class="content-header">Dados do cliente</div>
+    </div>
+  </div>
+  <div class="row text-left">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-content">
+          <div class="px-3">
+            <form class="form">
+              <div class="form-body">
+                <h4 class="form-section"><i class="ft-user"></i> Dados pessoais</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="projectinput1">Nome</label>
+                      <input type="text" id="projectinput1" class="form-control" name="fname">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="projectinput2">Sobrenome</label>
+                      <input type="text" id="projectinput2" class="form-control" name="lname">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="projectinput3">E-mail</label>
+                      <input type="text" id="projectinput3" class="form-control" name="email">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="projectinput4">Telefone</label>
+                      <input type="number" id="projectinput4" class="form-control" name="phone">
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="form-section"><i class="ft-file-text"></i> Dados profissionais</h4>
+
+                <div class="form-group">
+                  <label for="companyName">Empresa a qual trabalha</label>
+                  <input type="text" id="companyName" class="form-control" name="company">
+                </div>
+
+                <div class="form-group">
+                  <label for="companyName">Data de início nesta empresa</label>
+                  <input type="text" id="companyName" class="form-control" name="company">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-content">
+          <div class="px-3">
+
+            <form class="form">
+              <div class="form-body">
+                <h4 class="form-section"><i class="ft-info"></i> Objetivos do cliente</h4>
+                <div class="row">
+                  <div class="col-md-12">
+                    <fieldset class="form-group">
+                      <label for="disabledInput">Descrição do objetivo</label>
+                      <p class="form-control-static" id="staticInput">Obter uma CNH </p>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="projectinput8">Descrição do objetivo do cliente</label>
+                      <textarea id="projectinput8" rows="5" class="form-control" name="comment"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="form-section"><i class="ft-map"></i> Dados residenciais</h4>
+
+                <div class="form-group">
+                  <label for="userinput5">Endereço</label>
+                  <input class="form-control border-primary" type="email" id="userinput5">
+                </div>
+
+                <div class="form-group">
+                  <label for="userinput6">Número da residência</label>
+                  <input class="form-control border-primary" type="url" id="userinput6">
+                </div>
+
+                <div class="form-group">
+                  <label for="userinput6">Instruções para localização da residência</label>
+                  <input class="form-control border-primary" type="url" id="userinput6">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="basic-form-layouts">
+  <div class="row text-right">
+    <div class="col-sm-12">
+      <a [routerLink]="['/pages/maintenance']" class="btn btn-raised mr-1 btn-primary btn-lg">Enviar proposta</a>
+    </div>
+  </div>
+</section>
+<!-- // Basic form layout section end -->
