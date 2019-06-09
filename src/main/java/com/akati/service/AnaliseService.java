@@ -20,6 +20,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.akati.controller.AkatiConstants;
 import com.akati.controller.ProcessaAnalise;
 import com.akati.model.Analise;
 import com.akati.model.AnaliseResponse;
@@ -41,17 +42,17 @@ public class AnaliseService {
 	public Boolean execute(int valorCompra, int parcelas){
 		try {
 			
-			disableSslVerification();
+			//disableSslVerification();
 			
 			ObjectMapper mapper = new ObjectMapper();
 			
 			//treina o algoritmo de consumo do cliente
-			postRequest(pathKmeansTrain);
+			postRequest(pathKmeansTrain, AkatiConstants.KMEANS_EXAMPLE);
 			
 			//verifica se o sonho nao passou do padrao
-			ResponseEntity<String> pegaPadraoConsumo = postRequest(pathKmeansPattern);
+			String pegaPadraoConsumo = postRequest(pathKmeansPattern, AkatiConstants.KMEANS_PATTERN);
 			
-			Boolean saiuDoPadrao = mapper.readValue(pegaPadraoConsumo.getBody(), Boolean.class);
+			Boolean saiuDoPadrao = pegaPadraoConsumo.contains("true")? true: false;
 			
 			if(saiuDoPadrao) return false;
 			
@@ -91,18 +92,17 @@ public class AnaliseService {
 		return response;
 	}
 	
-	private ResponseEntity<String> postRequest(String path){
+	private String postRequest(String path, String body){
 		
 		RestTemplate restTemplate = new RestTemplate();
 		
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Token 4db52c5d41e2f65c98317db3523ab3ea3ee45c61");
+		headers.add("Authorization", "Token 4db52c5d41e2f65c98317db3523ab3ea3ee45c61");	
 		
+		HttpEntity<String> request = new HttpEntity<String>(body, headers);
+		ResponseEntity<String> response =  (ResponseEntity<String>) restTemplate.exchange("https://ciabhackathon.conductor.com.br:8443" + pathDados, HttpMethod.POST, request, String.class);
 		
-		HttpEntity<String> request = new HttpEntity<String>(headers);
-		ResponseEntity<String> response = (ResponseEntity) restTemplate.exchange("https://ciabhackathon.conductor.com.br:8443" + pathDados, HttpMethod.GET, request, String.class);			
-	
-		return response;
+		return response.getBody();
 	}
 	
 	private static void disableSslVerification() {
